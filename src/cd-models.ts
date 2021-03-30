@@ -5,9 +5,14 @@ export interface IUser {
   fullName: string;
 }
 
-export interface IRootProps {
+export interface IEventer {
   publish: () => {};
   subscribe: () => {};
+  unsubscribe: () => {};
+}
+
+export interface IRootProps {
+  eventer: IEventer;
   user: IUser;
 }
 
